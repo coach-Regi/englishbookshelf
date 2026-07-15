@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    /* ── Target ──────────────────────────────────────────────────────────── */
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* ── Module Resolution ───────────────────────────────────────────────── */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* ── Strict Mode — всегда включён ────────────────────────────────────── */
+    /* Это предотвращает целый класс рантайм-ошибок на этапе компиляции.    */
+    /* Особенно важно для координат пинов (float) и nullable API-ответов.   */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+
+    /* ── Алиасы путей ────────────────────────────────────────────────────── */
+    /* Должны совпадать с resolve.alias в vite.config.ts                    */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["src", "vite.config.ts", "tailwind.config.ts"],
+  "exclude": ["node_modules", "dist"]
+}
