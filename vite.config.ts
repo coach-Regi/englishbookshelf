@@ -74,6 +74,7 @@ export default defineConfig(({ mode }) => {
     // Используется для тестирования production build локально
     preview: {
       port: 4173,
+      allowedHosts: ["englishbookshelf-regi04.amvera.io"], // Разрешаем доступ с внешнего домена Amvera
       proxy: {
         "/api": {
           target: "http://localhost:8000",
